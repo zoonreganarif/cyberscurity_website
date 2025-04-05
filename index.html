@@ -1,95 +1,58 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Cybersecurity Fun</title>
-  <meta charset="UTF-8">
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f0f8ff;
-      padding: 30px;
-      color: #333;
-    }
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  padding: 30px;
+  background: linear-gradient(-45deg, #1f1f1f, #2a2a2a, #333, #1a1a1a);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
 
-    h1 {
-      color: #0077cc;
-    }
+@keyframes gradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
 
-    .penjelasan, .kuis {
-      background: #ffffff;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      margin-top: 20px;
-    }
+h1, h2 {
+  color: #58a6ff;
+}
 
-    .kuis input {
-      padding: 8px;
-      width: 250px;
-    }
+.penjelasan, .kuis, .tips-box {
+  background-color: #161b22;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  margin-top: 20px;
+}
 
-    .kuis button {
-      padding: 8px 12px;
-      margin-left: 10px;
-      background-color: #0077cc;
-      color: white;
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
-    }
+input {
+  padding: 8px;
+  width: 250px;
+  background-color: #0d1117;
+  color: white;
+  border: 1px solid #30363d;
+  border-radius: 5px;
+}
 
-    .hasil {
-      margin-top: 10px;
-      font-weight: bold;
-    }
-  </style>
-</head>
-<body>
-  <h1>Selamat Datang di Dunia Cybersecurity! 🔐</h1>
+button {
+  padding: 8px 12px;
+  margin-left: 10px;
+  background-color: #238636;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
 
-  <div class="penjelasan">
-    <h2>Apa itu Cybersecurity?</h2>
-    <p>
-      Cybersecurity adalah cara kita melindungi data dan perangkat kita dari orang jahat di internet.
-      Misalnya: virus, hacker, atau pencuri data.
-    </p>
-    <p>
-      Contoh sederhana:
-      <ul>
-        <li>Jangan kasih password ke orang lain</li>
-        <li>Jangan klik link aneh dari orang yang tidak dikenal</li>
-        <li>Gunakan password yang kuat</li>
-      </ul>
-    </p>
-  </div>
+a {
+  display: inline-block;
+  margin-top: 20px;
+  color: #58a6ff;
+  text-decoration: none;
+}
 
-  <div class="kuis">
-    <h2>🧠 Teka-Teki Cyber!</h2>
-    <p><strong>Pertanyaan:</strong>  
-      Saya adalah kode rahasia, yang dipakai untuk lindungi pesan.  
-      Tanpa saya, pesanmu bisa dibaca siapa saja.  
-      Apakah saya?
-    </p>
-
-    <input type="text" id="jawaban" placeholder="Tulis jawabanmu di sini...">
-    <button onclick="cekJawaban()">Cek Jawaban</button>
-
-    <div class="hasil" id="hasil"></div>
-  </div>
-
-  <script>
-    function cekJawaban() {
-      const jawaban = document.getElementById("jawaban").value.trim().toLowerCase();
-      const hasil = document.getElementById("hasil");
-
-      if (jawaban === "enkripsi") {
-        hasil.innerText = "✅ Benar! Enkripsi melindungi pesanmu!";
-        hasil.style.color = "green";
-      } else {
-        hasil.innerText = "❌ Salah. Coba lagi!";
-        hasil.style.color = "red";
-      }
-    }
-  </script>
-</body>
-</html>
+a:hover {
+  text-decoration: underline;
+}
