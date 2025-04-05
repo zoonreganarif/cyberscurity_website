@@ -1,71 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cybersecurity Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: white;
-            color: black;
-            transition: background 0.5s, color 0.5s;
-        }
-        .dark-mode {
-            background-color: black;
-            color: white;
-        }
-        .container {
-            margin-top: 50px;
-        }
-        button {
-            padding: 10px;
-            margin: 10px;
-            cursor: pointer;
-        }
-    </style>
+  <title>Cybersecurity Fun</title>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f8ff;
+      padding: 30px;
+      color: #333;
+    }
+
+    h1 {
+      color: #0077cc;
+    }
+
+    .penjelasan, .kuis {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-top: 20px;
+    }
+
+    .kuis input {
+      padding: 8px;
+      width: 250px;
+    }
+
+    .kuis button {
+      padding: 8px 12px;
+      margin-left: 10px;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .hasil {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Cybersecurity Fun Zone</h1>
-        
-        <!-- Dark Mode Switch -->
-        <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
-        
-        <!-- Cybersecurity Quiz -->
-        <h2>Cybersecurity Quiz</h2>
-        <p>Mana yang merupakan contoh password yang kuat?</p>
-        <button onclick="checkAnswer(true)">H@ck3r$Rul3!</button>
-        <button onclick="checkAnswer(false)">password123</button>
-        <p id="quiz-result"></p>
-        
-        <!-- Simple Encryption Simulation -->
-        <h2>Simulasi Enkripsi</h2>
-        <input type="text" id="inputText" placeholder="Masukkan teks">
-        <button onclick="encryptText()">Enkripsi</button>
-        <p id="encryptedText"></p>
-    </div>
+  <h1>Selamat Datang di Dunia Cybersecurity! 🔐</h1>
 
-    <script>
-        function toggleDarkMode() {
-            document.body.classList.toggle('dark-mode');
-        }
-        
-        function checkAnswer(isCorrect) {
-            let result = document.getElementById("quiz-result");
-            if (isCorrect) {
-                result.innerHTML = "✅ Benar! Password yang kuat harus sulit ditebak.";
-            } else {
-                result.innerHTML = "❌ Salah! Hindari password yang mudah ditebak.";
-            }
-        }
-        
-        function encryptText() {
-            let text = document.getElementById("inputText").value;
-            let encrypted = btoa(text); // Menggunakan Base64 encoding
-            document.getElementById("encryptedText").innerHTML = "Hasil Enkripsi: " + encrypted;
-        }
-    </script>
+  <div class="penjelasan">
+    <h2>Apa itu Cybersecurity?</h2>
+    <p>
+      Cybersecurity adalah cara kita melindungi data dan perangkat kita dari orang jahat di internet.
+      Misalnya: virus, hacker, atau pencuri data.
+    </p>
+    <p>
+      Contoh sederhana:
+      <ul>
+        <li>Jangan kasih password ke orang lain</li>
+        <li>Jangan klik link aneh dari orang yang tidak dikenal</li>
+        <li>Gunakan password yang kuat</li>
+      </ul>
+    </p>
+  </div>
+
+  <div class="kuis">
+    <h2>🧠 Teka-Teki Cyber!</h2>
+    <p><strong>Pertanyaan:</strong>  
+      Saya adalah kode rahasia, yang dipakai untuk lindungi pesan.  
+      Tanpa saya, pesanmu bisa dibaca siapa saja.  
+      Apakah saya?
+    </p>
+
+    <input type="text" id="jawaban" placeholder="Tulis jawabanmu di sini...">
+    <button onclick="cekJawaban()">Cek Jawaban</button>
+
+    <div class="hasil" id="hasil"></div>
+  </div>
+
+  <script>
+    function cekJawaban() {
+      const jawaban = document.getElementById("jawaban").value.trim().toLowerCase();
+      const hasil = document.getElementById("hasil");
+
+      if (jawaban === "enkripsi") {
+        hasil.innerText = "✅ Benar! Enkripsi melindungi pesanmu!";
+        hasil.style.color = "green";
+      } else {
+        hasil.innerText = "❌ Salah. Coba lagi!";
+        hasil.style.color = "red";
+      }
+    }
+  </script>
 </body>
 </html>
