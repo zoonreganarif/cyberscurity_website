@@ -1,3 +1,4 @@
+/* Background dan dark mode */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -6,18 +7,22 @@ body {
   animation: gradient 15s ease infinite;
   color: #c9d1d9;
   padding: 30px;
+  min-height: 100vh;
 }
 
+/* Animasi latar belakang */
 @keyframes gradient {
-  0% {background-position: 0% 50%;}
-  50% {background-position: 100% 50%;}
-  100% {background-position: 0% 50%;}
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
+/* Judul */
 h1, h2 {
   color: #58a6ff;
 }
 
+/* Box untuk bagian penjelasan */
 section {
   background-color: #161b22;
   padding: 20px;
@@ -26,6 +31,7 @@ section {
   margin-top: 20px;
 }
 
+/* Input teks */
 input {
   padding: 8px;
   width: 250px;
@@ -35,6 +41,7 @@ input {
   border-radius: 5px;
 }
 
+/* Tombol */
 button {
   padding: 8px 12px;
   margin-left: 10px;
@@ -45,11 +52,17 @@ button {
   border-radius: 5px;
 }
 
+button:hover {
+  background-color: #2ea043;
+}
+
+/* Link */
 a {
   display: inline-block;
   margin-top: 20px;
   color: #58a6ff;
   text-decoration: none;
+  font-weight: bold;
 }
 
 a:hover {
