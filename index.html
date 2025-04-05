@@ -1,23 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Tips Cyber Aman</title>
+  <title>Cybersecurity Fun</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>💡 Tips Aman di Dunia Maya</h1>
+  <h1>🔐 Cybersecurity Fun</h1>
 
-  <div class="tips-box">
+  <section>
+    <h2>Apa itu Cybersecurity?</h2>
+    <p>
+      Cybersecurity adalah perlindungan sistem, jaringan, dan data dari serangan digital.  
+      Tujuannya agar informasi tetap aman, tidak dicuri, diubah, atau dihancurkan.
+    </p>
     <ul>
-      <li>Gunakan password yang kuat (gabungan huruf, angka, simbol)</li>
-      <li>Jangan klik link mencurigakan</li>
-      <li>Aktifkan verifikasi dua langkah</li>
-      <li>Jangan share informasi pribadi ke orang asing</li>
-      <li>Selalu logout dari akun penting</li>
+      <li>Melindungi data pribadi</li>
+      <li>Mencegah serangan hacker</li>
+      <li>Menjaga informasi tetap rahasia</li>
     </ul>
-  </div>
+  </section>
 
-  <a href="index.html">⬅️ Kembali ke Beranda</a>
+  <section>
+    <h2>🧠 Teka-Teki Cyber</h2>
+    <p><strong>Pertanyaan:</strong><br>
+      Saya adalah kode rahasia, yang melindungi pesanmu dari orang jahat. Siapakah saya?
+    </p>
+
+    <input type="text" id="jawaban" placeholder="Jawabanmu...">
+    <button onclick="cekJawaban()">Cek Jawaban</button>
+    <p id="hasil"></p>
+  </section>
+
+  <a href="tips.html">➡️ Lanjut ke Halaman Tips</a>
+
+  <script>
+    function cekJawaban() {
+      const jawaban = document.getElementById("jawaban").value.trim().toLowerCase();
+      const hasil = document.getElementById("hasil");
+
+      if (jawaban === "enkripsi") {
+        hasil.innerText = "✅ Benar! Enkripsi menjaga pesan tetap aman!";
+        hasil.style.color = "#3fb950";
+      } else {
+        hasil.innerText = "❌ Salah. Coba lagi!";
+        hasil.style.color = "#f85149";
+      }
+    }
+  </script>
 </body>
 </html>
